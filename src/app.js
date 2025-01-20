@@ -1,3 +1,4 @@
+require('module-alias/register')
 const envs = require('./configs/env.config')
 const Server = require('./server')
 const AppRoutes = require('./routes')
