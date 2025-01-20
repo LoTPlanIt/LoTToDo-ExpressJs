@@ -1,6 +1,6 @@
 const express = require('express')
 const apiV1Router = express.Router()
-const authRouter = require('./auths/auth.route')
+const authRouter = require('./modules/auths/auth.route')
 
 apiV1Router.use('/auth', authRouter)
 apiV1Router.get('/', (req, res) => {
