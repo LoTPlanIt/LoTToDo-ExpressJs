@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/LoTPlanIt/LoTToDo-ExpressJs#readme",
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "compression": "^1.7.5",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
@@ -30,6 +31,7 @@
     "express-rate-limit": "^7.5.0",
     "express-validator": "^7.2.1",
     "jsonwebtoken": "^9.0.2",
+    "module-alias": "^2.2.3",
     "mongoose": "^8.9.3",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.1"
@@ -41,5 +43,12 @@
     "eslint-plugin-prettier": "^5.2.1",
     "globals": "^15.14.0",
     "prettier": "^3.4.2"
+  },
+  "_moduleAliases": {
+    "@src": "src",
+    "@configs": "src/configs",
+    "@features": "src/features",
+    "@constants": "src/constants",
+    "@utils": "src/utils"
   }
 }
