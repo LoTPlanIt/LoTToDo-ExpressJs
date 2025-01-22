@@ -2,6 +2,7 @@ const express = require('express')
 const session = require('cookie-session')
 const compression = require('compression')
 const cors = require('cors')
+const morgan = require('morgan')
 const helmet = require('helmet')
 const rateLimit = require('express-rate-limit')
 
@@ -30,8 +31,7 @@ class Server {
     this.app.use(compression())
     this.app.use(cors())
     this.app.use(helmet())
-    // TODO: morgan
-
+    this.app.use(morgan('dev'))
     // Rate limit
     this.app.use(
       rateLimit({
@@ -41,7 +41,6 @@ class Server {
           'Too many requests from this IP, please try again after an hour'
       })
     )
-
     // Session
     this.app.use(
       session({
@@ -55,7 +54,6 @@ class Server {
         }
       })
     )
-
     // Routes
     this.app.use(this.apiPrefix, this.routes)
 
