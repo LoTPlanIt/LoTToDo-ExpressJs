@@ -5,7 +5,11 @@ import js from '@eslint/js'
 /** @type {import('eslint').Linter.Config[]} */
 export default [
   js.configs.recommended,
-  { files: ['**/*.js'], languageOptions: { sourceType: 'commonjs' } },
+  {
+    files: ['**/*.js'],
+    languageOptions: { sourceType: 'commonjs' },
+    globals: { ...globals.node }
+  },
   { languageOptions: { globals: globals.browser } },
   pluginJs.configs.recommended
 ]
