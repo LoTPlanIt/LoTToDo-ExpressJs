@@ -1,4 +1,4 @@
-const UserService = require('../../services/user.service')
+const UserService = require('@apiV1/services/user.service')
 const { hashPassword } = require('@utils/bcrypt.util')
 
 const userController = {

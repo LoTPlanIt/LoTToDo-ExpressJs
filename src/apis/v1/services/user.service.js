@@ -1,4 +1,4 @@
-const UserDocument = require('../models/user.schema')
+const UserDocument = require('@apiV1/models/user.schema')
 
 const UserService = {
   create(userData) {
