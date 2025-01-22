@@ -9,6 +9,8 @@ async function main() {
   const server = new Server({
     port: envs.PORT,
     apiPrefix: envs.API_PREFIX,
+    sessionKey1: envs.SESSION_KEY_1,
+    sessionKey2: envs.SESSION_KEY_2,
     routes: AppRoutes.routes()
   })
   server.start()
